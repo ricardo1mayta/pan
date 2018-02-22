@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-login" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/login"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/login" destdir="${build.generated.dir}/jax-wsCache/login" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/login/wsdl/192.168.1.212_8080/WSservidor/login.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.212:8080/WSservidor/login?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/login/wsdl/192.168.1.212_8080/WSservidor/login.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/login"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/login">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-login" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/api"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/login"/>
+    </target>
+    <target name="wsimport-client-regUltimo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/regUltimo"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/regUltimo" destdir="${build.generated.dir}/jax-wsCache/regUltimo" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/regUltimo/wsdl/192.168.1.212_8080/WSservidor/regUltimo.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.212:8080/WSservidor/regUltimo?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/regUltimo/wsdl/192.168.1.212_8080/WSservidor/regUltimo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/regUltimo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/regUltimo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-regUltimo" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/api"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/regUltimo"/>
+    </target>
+    <target name="wsimport-client-cargarventasSede" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/cargarventasSede"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/cargarventasSede" destdir="${build.generated.dir}/jax-wsCache/cargarventasSede" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/cargarventasSede/wsdl/192.168.1.212_8080/WSservidor/cargarventasSede.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.212:8080/WSservidor/cargarventasSede?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/cargarventasSede/wsdl/192.168.1.212_8080/WSservidor/cargarventasSede.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/cargarventasSede"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/cargarventasSede">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-cargarventasSede" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws/api"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/cargarventasSede"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-login, wsimport-client-regUltimo, wsimport-client-cargarventasSede"/>
+</project>

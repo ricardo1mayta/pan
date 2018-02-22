@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://api.ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://api.ws/">
+
+<xs:element name="ultimo" type="tns:ultimo" />
+
+<xs:element name="ultimoResponse" type="tns:ultimoResponse" />
+
+<xs:complexType name="ultimo">
+<xs:sequence>
+<xs:element name="siscod" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ultimoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

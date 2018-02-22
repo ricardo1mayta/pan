@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.1.212:8080/WSservidor/login?wsdl" uri="wsdl/192.168.1.212_8080/WSservidor/login.wsdl"/>
+    <system systemId="http://192.168.1.212:8080/WSservidor/login?xsd=1" uri="wsdl/192.168.1.212_8080/WSservidor/login.xsd_1.xsd"/>
+    <system systemId="http://192.168.1.212:8080/WSservidor/regUltimo?wsdl" uri="wsdl/192.168.1.212_8080/WSservidor/regUltimo.wsdl"/>
+    <system systemId="http://192.168.1.212:8080/WSservidor/regUltimo?xsd=1" uri="wsdl/192.168.1.212_8080/WSservidor/regUltimo.xsd_1.xsd"/>
+    <system systemId="http://192.168.1.212:8080/WSservidor/cargarventasSede?wsdl" uri="wsdl/192.168.1.212_8080/WSservidor/cargarventasSede.wsdl"/>
+    <system systemId="http://192.168.1.212:8080/WSservidor/cargarventasSede?xsd=1" uri="wsdl/192.168.1.212_8080/WSservidor/cargarventasSede.xsd_1.xsd"/>
+</catalog>
